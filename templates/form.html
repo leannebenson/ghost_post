@@ -1,0 +1,9 @@
+<a href='/'>Home</a> | <a href="/sorted/">Sorted Posts</a> | <a href="/boasts/">Boast Posts</a> | <a
+    href="/roasts/">Roast Posts</a> | <a href="/addpost/">Add Posts</a>
+
+<h4>{{ a_title }}</h4>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit!">
+</form>

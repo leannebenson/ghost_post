@@ -1,0 +1,17 @@
+<a href='/'>Home</a> | <a href="/sorted/">Sorted Posts</a> | <a href="/boasts/">Boast Posts</a> | <a
+    href="/addpost/">Add Posts</a>
+
+<h1>{{ r_title }}</h1>
+
+{% for post in roasts %}
+<div>
+    <hr>
+    <h4>{{ post.content }}</h4>
+    <h4>Roast</h4>
+    <h4>{{ post.num_votes }}</h4>
+    <a href="/upvote/{{ post.id }}/">Up Vote</a>
+    <a href="/downvote/{{ post.id }}/">Down Vote</a>
+    <h4>{{ post.date_created }}</h4>
+    <hr>
+</div>
+{% endfor %}
