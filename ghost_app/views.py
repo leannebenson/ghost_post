@@ -44,6 +44,5 @@ def downvote(request, post_id):
 
 
 def votes_view(request):
-    # help from Chris Warren
     votes = sorted(Boast_Roast.objects.all(), key=lambda votes: votes.num_votes)[::-1]
     return render(request, 'votes.html', {'votes': votes, 'v_title': 'Sorted by Votes'})
